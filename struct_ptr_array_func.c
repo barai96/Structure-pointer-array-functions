@@ -18,13 +18,13 @@ int main()
     printf("Enter strength \n");        //entering the length of the array
     scanf("%d",&n);
     struct student s[n];                //defining a array of structure of the given length
-    for (i=0;i<n;i++)                   //loop untill the end of the structure to enter the details of student, call by referance, passes as the adress of the elements
+    for (i=0;i<n;i++)                   //loop untill the end of the structure to enter the details of student, call by referance, passes as the adress of the objects assigned by array
+          display(&s[i]);
       {
         enter(&s[i]);
       }
       
-    for (i=0;i<n;i++)                    //loop untill the end of the structure to show the details of student, call by referance, passes as the adress of the elements
-      {
+    for (i=0;i<n;i++)                    //loop untill the end of the structure to show the details of student, call by referance, passes as the adress of the objects assigned by array
           display(&s[i]);
       }
     return 0;
